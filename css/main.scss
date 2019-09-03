@@ -1,0 +1,301 @@
+@charset "utf-8";
+
+
+
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+  );
+
+
+$blue:    #d4d25c  !default;
+$indigo:  #6610f2 !default;
+$purple:  #8952ee !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+@font-face{
+  src: url(../font/VT323-Regular.ttf );
+  font-family: VT;
+}
+.pixel{
+  font-family: VT;
+  width: 50px;
+  margin: 5%;
+  padding: 10px;
+
+}
+
+body{
+  background-color: #b7d3ec
+}
+
+.nav-bd{
+  width:100%;
+  height: 10%;
+  max-width: 1920px;
+  position: relative;
+  background-color: none;
+  background-image: url(../img/nav.png);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  
+}
+
+.top{
+  margin-top: 5px;
+  margin-top: 0.3%;
+  margin-left: 2px;
+  width: 100%;
+
+}
+
+
+.bot{
+  margin-bottom: 5px;
+  margin-bottom: 0.3%;
+  margin-left: 3px;
+  max-width: 1920px;
+  width: 100%;
+  height: 7%;
+  bottom: 2;
+  position: relative;
+  background-color: none;
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.img-nav{
+margin-left: 80px;
+margin-top: 13px;
+margin-bottom: .5%;
+max-width: 65%;
+max-height: 65%;
+width: 100%;
+height: auto;
+padding: 3px;
+position: center relative;
+
+}
+
+.icons{
+  margin-bottom: 10px;
+  margin-left: 25px;
+}
+
+.p-footer{
+  margin-top: 20px;
+  padding: 3px;
+  padding-top: 10px;
+  font-size: 15px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  color: #fff
+  
+}
+// leptop- resolution
+@media (min-width: 1000px) and (max-width:1300px){
+  
+  .img-nav{
+    width: 60%;
+    height: 50px;
+    margin-top: 18px;
+    margin-left: 60px;
+  }
+  .nav-bd{
+    width:100%;
+    height: 10%;
+    position: relative;
+    background-color: none;
+    background-image: url(../img/nav.png);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    
+  }
+    
+
+}
+//ipad resolution 
+@media (min-width: 768px) and (max-width: 999px) {
+  .img-nav{
+    width: 80%;
+    height: 65px;
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+
+  .nav-bd{
+    background:none;
+    background-image: url(../img/nav.png);
+    position:relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+   }
+
+  .bot{
+   margin-bottom: 5px;
+   margin-bottom: 0.3%;
+   margin-left: 3px;
+   width: 100%;
+   height: 7%;
+   bottom: 2;
+   position: relative;
+   background-color: none;
+    background-image: url(../img/footer.png);
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+//mobile resolution
+@media (max-width: 500px){
+
+  .img-nav{
+    margin-top: 15px;
+    height: 45px;
+    width: 80%;
+    margin-left: 2px;
+
+  }
+  .nav-bd{
+   background:none;
+   background-image: url(../img/nav.png);
+   position:relative;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -ms-background-size: cover;
+   -o-background-size: cover;
+  }
+
+  .icons{
+    margin-bottom: 5px;
+  }
+
+  .bot{
+   margin-bottom: 5px;
+   margin-bottom: 0.3%;
+   margin-left: 3px;
+   width: 100%;
+   height: 7%;
+   bottom: 2;
+   position: relative;
+   background-color: none;
+    background-image: url(../img/footer.png);
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+.espaco{
+    margin: 20px;
+    padding: 20px;
+
+
+}
+
+.content{ display:flex; justify-content: center}
+.contato{width: 100%; max-width: 500px;}
+.form{display: flex; flex-direction: column}
+.field{padding: 10px;margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 16px}
+textarea{height: 150px;} 
+
+@import "../node_modules/bootstrap/scss/bootstrap";
